@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">coding</div>
+            <div class="menu">
+                <a href="#">회사소개</a>
+                <a href="#">상품</a>
+                <a href="#">프로모션</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Hinted search text">
+                <button type="submit">🔍</button>
+            </div>
+            <div class="icons">
+                <span class="icon">🛒</span>
+                <span class="icon">👤</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="carousel">
+            <div class="carousel-content">
+                <div class="slide active">프로모션 1</div>
+                <div class="slide">프로모션 2</div>
+                <div class="slide">프로모션 3</div>
+            </div>
+            <div class="carousel-nav">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
